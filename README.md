@@ -1,1 +1,1 @@
-Respositório para a avaliação dos testes de candidatos a frontend
+Case para avaliação front-end Angular - Roziana Rodrigues
