@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent  implements OnInit {
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   public headerMenu: MenuItem[] = [

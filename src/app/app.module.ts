@@ -10,8 +10,7 @@ import { PopoverMenuComponent } from './components/popover-menu/popover-menu.com
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PopoverMenuComponent
+    AppComponent
   ],
   imports: [
     CommonModule,
