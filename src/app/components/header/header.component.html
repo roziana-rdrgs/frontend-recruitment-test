@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="header__logo">
+    <img src="assets/logo.svg" alt="Logomarca Glam Beauty" height="60px; vertical-align: middle">
+  </div>
+  <div>
+    <ul class="header__list">
+      <li *ngFor="let item of headerMenu" class="header__list__item" (click)="onSelectMenu(item)">
+        <a target={{item.link}} class="header__list__button" title={{item.title}}>{{item.title}}</a>
+        <div *ngIf="item.active" class="active"></div>
+      </li>
+    </ul>
+  </div>
+</div>

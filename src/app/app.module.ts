@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderModule } from './components/common/header/header.module';
+import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { PopoverMenuComponent } from './components/popover-menu/popover-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PopoverMenuComponent
   ],
   imports: [
     CommonModule,

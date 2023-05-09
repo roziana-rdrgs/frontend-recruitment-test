@@ -1,0 +1,43 @@
+$border_color_active: #EAD0FA
+
+.header
+  display: flex
+  flex-direction: row
+  height: 80px
+  justify-content: space-between
+  align-items: center
+
+  &__logo
+    margin-left: 75px
+    height:60px
+
+  &__list
+    list-style: none
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    grid-gap: 2rem
+    gap: 2rem
+    margin-right: 75px
+
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    &__button
+      list-style: none
+      font-style: normal
+      font-weight: 400
+      font-size: 20px
+      line-height: 24px
+      &:hover
+        background-color: #f4445e
+
+    .active
+      height: 4px
+      background-color: $border_color_active
+      width: 35px
+      border: solid 1px $border_color_active
+      border-radius: 50px
+
