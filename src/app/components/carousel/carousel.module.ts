@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { CarouselComponent } from './carousel.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -9,7 +10,8 @@ import { CarouselComponent } from './carousel.component';
     CarouselComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbCarouselModule, NgIf, NgFor
   ],
   exports:[
     CarouselComponent

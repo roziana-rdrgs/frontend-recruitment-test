@@ -1,1 +1,16 @@
-<p>carousel works!</p>
+<ngb-carousel
+	*ngIf="images"
+	[showNavigationArrows]="false"
+	[showNavigationIndicators]="true"
+  [pauseOnHover]="true"
+  [animation]="true"
+>
+	<ng-template ngbSlide *ngFor="let image of images;" class="carousel-item">
+		<div class="picsum-img-wrapper wrapper">
+			<img [src]="image" class="banner-image" alt="Banner Produtos em Destaque" />
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+
+

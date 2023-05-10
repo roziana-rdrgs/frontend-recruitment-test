@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from './components/carousel/carousel.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
