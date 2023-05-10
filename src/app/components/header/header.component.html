@@ -4,10 +4,25 @@
   </div>
   <div>
     <ul class="header__list">
-      <li *ngFor="let item of headerMenu" class="header__list__item" (click)="onSelectMenu(item)">
-        <a target={{item.link}} class="header__list__button" title={{item.title}}>{{item.title}}</a>
-        <div *ngIf="item.active" class="active"></div>
-      </li>
+      <div *ngFor="let item of headerMenu" >
+        <li class="header__list__item" (click)="onSelectMenu(item)">
+          <a target={{item.link}} class="header__list__button" title={{item.title}}>{{item.title}}
+
+            <div *ngIf="item.submenu && item.submenu.length > 0" ngbDropdown #p="ngbDropdown" (mouseenter)="p.open()" (mouseleave)="p.close()" >
+              <div  id="dropdowntoggle" ngbDropdownToggle>
+                <div ngbDropdownMenu aria-labelledby="dropdowntoggle" >
+                  <a ngbDropdownItem *ngFor="let item of item.submenu"target={{item.link}} title={{item.title}}>{{item.title}}</a>
+                </div>
+              </div>
+
+            </div>
+
+          </a>
+          <div *ngIf="item.active && !item.submenu" class="active"></div>
+
+        </li>
+
+      </div>
     </ul>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent  implements OnInit {
   public headerMenu: MenuItem[] = [
     { title: "Home", link: "", active: true},
     { title: "Sobre Nós", link: ""},
-    { title: "Loja", link: "", submenus: [
+    { title: "Loja", link: "", submenu: [
       { title: "Limpeza", link: ""},
       { title: "Hidratação", link: ""},
       { title: "Proteção", link: ""},
@@ -27,12 +28,11 @@ export class HeaderComponent  implements OnInit {
     });
 
   }
-
 }
 
 export interface MenuItem {
   title: string
   link: string
   active?: boolean
-  submenus?: MenuItem[]
+  submenu?: MenuItem[]
 }

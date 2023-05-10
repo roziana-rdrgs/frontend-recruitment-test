@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { PopoverMenuComponent } from './components/popover-menu/popover-menu.component';
 
 @NgModule({
   declarations: [
