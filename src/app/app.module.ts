@@ -7,6 +7,7 @@ import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from './components/carousel/carousel.module';
+import { ReviewerCardModule } from './components/reviewer-card/reviewer';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CarouselModule } from './components/carousel/carousel.module';
     AppRoutingModule,
     HeaderModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    ReviewerCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
