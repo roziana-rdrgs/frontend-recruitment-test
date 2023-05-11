@@ -1,19 +1,15 @@
-runtime: python27
-api_version: 1
-threadsafe: yes
+
+runtime: nodejs16
+
+instance_class: F2
+
+env_variables:
+  BUCKET_NAME: "glambeauty"
 
 handlers:
-  - url: /
-    static_files: dist/frontend-recruitment-test/index.html
-    upload: dist/frontend-recruitment-test/index.html
-  - url: /
-    static_dir: dist/frontend-recruitment-test
-skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
+- url: /
+  static_files: dist/frontend-recruitment-test/index.html
+  upload: dist/frontend-recruitment-test/index.html
+
+- url: /
+  static_dir: dist/frontend-recruitment-test
