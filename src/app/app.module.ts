@@ -8,11 +8,15 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { ReviewerCardModule } from './components/reviewer-card/reviewer.module';
-import { HomeModule } from './pages/home/home.module';
+import { HomeComponent } from './pages/home/home.component';
+import { CarouselModule } from './components/carousel/carousel.module';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AboutUsComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,8 @@ import { HomeModule } from './pages/home/home.module';
     AppRoutingModule,
     HeaderModule,
     RouterModule,
-    ReviewerCardModule
+    ReviewerCardModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
