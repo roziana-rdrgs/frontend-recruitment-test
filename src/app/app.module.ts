@@ -8,8 +8,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { ReviewerCardModule } from './components/reviewer-card/reviewer.module';
-import { CarouselModule } from './components/carousel/carousel.module';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +20,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     AppRoutingModule,
     HeaderModule,
     RouterModule,
-    ReviewerCardModule,
-    CarouselModule,
-    IvyCarouselModule
+    ReviewerCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
