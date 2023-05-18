@@ -1,108 +1,21 @@
-
-<!-- <ngb-carousel
-	*ngIf="reviews"
-	[showNavigationArrows]="false"
-	[showNavigationIndicators]="true"
-  [pauseOnHover]="true"
-  [animation]="true"
->
-	<ng-template ngbSlide >
-		<div class="wrapper row-horizon">
-			<div class="reviewer__card" *ngFor="let review of reviews;" >
+<div class="wrapper">
+  <p-carousel [value]="reviews" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions" [showNavigators]="false">
+    <ng-template let-review pTemplate="item" >
+      <div class="reviewer__card">
         <img class="reviewer__card__image" [src]="review.image" alt="Banner Produtos em Destaque" />
         <div class="reviewer__card__description">
           <div class="reviewer__card__description__title">
             <img src="../../../assets/quot.svg" alt="Arroba da Influencer" />
-            <p> {{review.userName}}</p>
+            <h4> {{review.userName}}</h4>
           </div>
           <p>
             {{review.description}}
           </p>
         </div>
       </div>
-		</div>
-	</ng-template>
-</ngb-carousel> -->
-
-
-<!-- <div class="row row-horizon">
-
-  <div class="reviewer__card col-xs-6" *ngFor="let review of reviews;" >
-    <img class="reviewer__card__image" [src]="review.image" alt="Banner Produtos em Destaque" />
-    <div class="reviewer__card__description">
-      <div class="reviewer__card__description__title">
-        <img src="../../../assets/quot.svg" alt="Arroba da Influencer" />
-        <p> {{review.userName}}</p>
-      </div>
-      <p>
-        {{review.description}}
-      </p>
-    </div>
-  </div>
-</div> -->
-<!--
-<div class="reviewers__container">
-  <div class="reviewer__card col-xs-6" *ngFor="let review of reviews;" >
-    <img class="reviewer__card__image" [src]="review.image" alt="Banner Produtos em Destaque" />
-    <div class="reviewer__card__description">
-      <div class="reviewer__card__description__title">
-        <img src="../../../assets/quot.svg" alt="Arroba da Influencer" />
-        <p> {{review.userName}}</p>
-      </div>
-      <p>
-        {{review.description}}
-      </p>
-    </div>
-  </div>
+    </ng-template>
+  </p-carousel>
 </div>
 
 
 
-<div class="container px-0">
-  <drag-scroll #nav [scroll-x-wheel-enabled]="true">
-    <div *ngFor="let review of reviews; let i = index" drag-scroll-item>
-      <div class="card shadow-sm">
-        <img [src]="review.image"  class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">{{review.userName}}</h6>
-
-          <p class="card-price">RM</p>
-        </div>
-      </div>
-    </div>
-  </drag-scroll>
-
-  <div class="bottom-placeholder"></div>
-  <div class="bottom-placeholder"></div>
-  <div class="bottom-placeholder"></div>
-  <div class="bottom-placeholder"></div>
-</div> -->
-
-<div class="container px-0">
-  <div>
-
-  </div>
-</div>
-<ngb-carousel
-	[showNavigationArrows]="false"
-	[showNavigationIndicators]="true"
-  [pauseOnHover]="true"
-  [animation]="true"
->
-	<ng-template ngbSlide *ngFor="let review of reviews;"  >
-		<div class="wrapper">
-      <div class="reviewer__card col-xs-6" *ngFor="let review of reviews;">
-        <img class="reviewer__card__image" [src]="review.image" alt="Banner Produtos em Destaque" />
-        <div class="reviewer__card__description">
-          <div class="reviewer__card__description__title">
-            <img src="../../../assets/quot.svg" alt="Arroba da Influencer" />
-            <p> {{review.userName}}</p>
-          </div>
-          <p>
-            {{review.description}}
-          </p>
-        </div>
-      </div>
-		</div>
-	</ng-template>
-</ngb-carousel>

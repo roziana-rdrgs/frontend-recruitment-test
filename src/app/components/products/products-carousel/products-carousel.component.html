@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <h1>Nossos Produtos</h1>
+  <p-carousel class="custom" [value]="products" [numVisible]="5" [numScroll]="1" [responsiveOptions]="responsiveOptions" [showNavigators]="false">
+    <ng-template let-product pTemplate="item" >
+      <app-products-card [product]="product"></app-products-card>
+    </ng-template>
+  </p-carousel>
+  <div class="see__more">Ver mais produtos</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="subscription__container">
+  <div  *ngIf="!subscriptionSent">
+    <p>Cadastre-se aqui e receba descontos e novidades</p>
+
+    <div class="subscription_send">
+      <input pInputText type="text" class="p-inputtext-sm" placeholder="Digite seu nome" [(ngModel)]="name"/>
+      <input pInputText type="text" class="p-inputtext-sm" placeholder="Digite seu e-mail" [(ngModel)]="email"/>
+      <button type="button" (click)="sendSubscription()"> Enviar </button>
+    </div>
+  </div>
+
+  <div class="subscription__sent" *ngIf="subscriptionSent">
+    <img src="../../../assets/subscription-send.png" alt="E-mail enviado com sucesso."/>
+    <p>Seu e-mail foi cadastrado com sucesso!</p>
+  </div>
+</div>
+

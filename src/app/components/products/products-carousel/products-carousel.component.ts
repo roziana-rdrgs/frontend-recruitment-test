@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { Review } from 'src/app/models/review';
+import { ProductsService } from 'src/app/services/products/products.service';
 import { ReviewerService } from 'src/app/services/reviewer/reviewer.service';
 
 @Component({
-  selector: 'app-reviewer-card',
-  templateUrl: './reviewer-card.component.html',
-  styleUrls: ['./reviewer-card.component.sass']
+  selector: 'app-products-carousel',
+  templateUrl: './products-carousel.component.html',
+  styleUrls: ['./products-carousel.component.sass']
 })
-export class ReviewerCardComponent implements OnInit{
+export class ProductsCarouselComponent  implements OnInit{
 
-  public reviews: Review[] = []
+  public products: Product[] = []
   responsiveOptions: any[];
 
-  constructor(reviewerService: ReviewerService) {
-    this.reviews = reviewerService.getReviews();
+  constructor(productsService: ProductsService) {
+    this.products = productsService.getProducts();
     this.responsiveOptions = [
       {
           breakpoint: '1400px',
@@ -31,6 +33,11 @@ export class ReviewerCardComponent implements OnInit{
           numScroll: 1
       },
       {
+        breakpoint: '800px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
         breakpoint: '500px',
         numVisible: 1,
         numScroll: 1
@@ -38,5 +45,4 @@ export class ReviewerCardComponent implements OnInit{
     ];
   }
   ngOnInit() { }
-
 }

@@ -1,0 +1,23 @@
+<div class="product__card"  (mouseenter)="displayButtonBuy = !displayButtonBuy" (mouseleave)="displayButtonBuy = !displayButtonBuy">
+  <div class="product__card__tag" [ngClass]="getProductCategory(product.category)">{{product.category}}</div>
+  <img class="product__card__image" [src]="product.image" [alt]="product.name"/>
+
+  <ng-container *ngIf="displayButtonBuy">
+    <div class="shop__button">
+      <img src="../../../../assets/shop.png" alt="Comprar Item" />
+      <h4>Comprar</h4>
+    </div>
+  </ng-container>
+  <div class="product__card__details">
+    <ngb-rating [(rate)]="product.rate" [max]="5">
+      <ng-template let-fill="fill" let-index="index">
+        <i class="bi-star{{fill === 100 ? '-fill' : ''}}" [class.filled]="fill === 100" [class.low]="index < 3"></i>
+      </ng-template>
+    </ngb-rating>
+    <p class="product__card__name">
+      {{product.name}}
+    </p>
+    <p>De: <span class="old__price"> {{product.old_price | currency : 'BRL'}}</span></p>
+    <p>Por: <span class="new__price"> {{product.new_price | currency: 'BRL' }}</span> </p>
+  </div>
+</div>

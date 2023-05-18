@@ -19,11 +19,11 @@ export class HeaderComponent  implements OnInit {
     { title: "Home", link: "/", active: true},
     { title: "Sobre Nós", link: "about-us"},
     { title: "Loja", link: "", submenu: [
-      { title: "Limpeza", link: ""},
-      { title: "Hidratação", link: ""},
-      { title: "Proteção", link: ""},
-      { title: "Kits", link: ""},
-      { title: "Ver todos", link: ""}
+      { title: "Limpeza", link: "https://glam.com.br/loja/collections/glambeauty?page=1&scrollY=172&profile=false&brandIds=&prices...=&prices=&catFilter=limpeza"},
+      { title: "Hidratação", link: "https://glam.com.br/loja/collections/glambeauty?page=1&scrollY=172&profile=false&brandIds=&prices...=&prices=&catFilter=hidrata%C3%A7%C3%A3o"},
+      { title: "Proteção", link: "https://glam.com.br/loja/collections/glambeauty?page=1&scrollY=172&profile=false&brandIds=&prices...=&prices=&catFilter=prote%C3%A7%C3%A3o"},
+      { title: "Kits", link: "https://glam.com.br/loja/collections/glambeauty?page=1&scrollY=172&profile=false&brandIds=&prices...=&prices=&catFilter=kits"},
+      { title: "Ver todos", link: "https://glam.com.br/loja/collections/glambeauty"}
     ]}
   ];
 
@@ -31,7 +31,8 @@ export class HeaderComponent  implements OnInit {
     this.headerMenu.forEach(element => {
       element.active = menu == element
     });
-    this.router.navigate([menu.link])
+    if (!menu.submenu)
+     this.router.navigate([menu.link])
 
   }
 }

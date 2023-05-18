@@ -1,0 +1,97 @@
+$rate: #ffc427
+$shop: #EAD0FA
+i
+  font-size: 2rem
+  padding-right: 0.5rem
+  color: $rate
+
+.filled
+  color: $rate
+
+.product__card
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  position: relative
+  overflow: hidden
+  cursor: default
+  width: 230px
+  height: 340px
+  border: 1px solid #F4E7FC
+  box-shadow: 3px 2px 8px rgba(221, 175, 250, 0.35)
+  border-radius: 16px
+  padding: 10px
+
+  &__image
+    height: 190px
+    border-radius: 30px
+    padding: 15px
+
+  p
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+  &__name
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 19px
+
+  &__tag
+    position: absolute
+    width: 100px
+    height: 24px
+    left: 10px
+    top: 10px
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 19px
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
+
+  .protect
+    background-color: #FB9EAE
+  .clean
+    background-color: #EAD0FA
+  .hidra
+    background-color: #AFE7FF
+
+  .old__price
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+    display: flex
+    align-items: center
+    text-decoration-line: line-through
+
+  .new__price
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 600
+    font-size: 15px
+    line-height: 20px
+    display: flex
+    align-items: center
+
+.shop__button
+  cursor: pointer
+  background-color: $shop
+  border-radius: 30px
+  width: 179px
+  height: 37px
+  display: flex
+  flex-direction: row
+  align-content: center
+  justify-content: space-evenly
+  align-items: center
+  position: absolute
+  top: 150px
+  h4
+    font-weight: 600
